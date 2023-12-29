@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Clientes con más compras{% endblock %}
+
+{% block content %}
+
+    <div class="reporte-body">
+        <h1>Productos más vendidos</h1>
+
+        <div class="canvas-container">
+            <canvas id="grafica"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Obtén los datos de Django y pásalos a JavaScript
+        var nombresClientes = {{ nombres_clientes|safe }};
+        var cantidadesCompras = {{ cantidades_compras|safe }};
+
+        console.log(nombresClientes);
+        console.log(cantidadesCompras);
+
+        // Configura la gráfica
+        var ctx = document.getElementById('grafica').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: nombresClientes,
+                datasets: [{
+                    label: 'Total de Compras realizadas',
+                    data: cantidadesCompras,
+                    backgroundColor: 'rgba(238, 202, 88, 0.5)',
+                    borderColor: 'rgba(213, 176, 55, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+{% endblock %}

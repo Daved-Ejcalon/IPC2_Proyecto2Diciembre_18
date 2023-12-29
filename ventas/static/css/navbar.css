@@ -1,0 +1,14 @@
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  min-height: 10%;
+  align-items: center;
+  top: 0;
+}
+.navbar img {
+  max-height: 2rem;
+  margin: 0 10px;
+}

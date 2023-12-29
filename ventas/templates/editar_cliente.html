@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Editar cliente{% endblock %}
+
+{% block content %}
+<div class="edicion">
+    <div class="form-datos">
+        <div class="container">
+
+            <div class="heading">
+                <h1>Editar Cliente</h1>
+            </div>
+
+            <form method="post" action="{% url 'ventas:editar_cliente' cliente.id %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn yellow-color">Guardar cambios</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

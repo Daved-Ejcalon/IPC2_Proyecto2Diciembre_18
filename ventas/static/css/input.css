@@ -1,0 +1,114 @@
+:root {
+  --red-color: #a62121;
+  --blue-color: #4bb7e6;
+  --yellow-color: #f7d46e;
+  --darken-red-color: #531010;
+  --darken-blue-color: #136386;
+  --darken-yellow-color: #edb40d;
+  --input-color: #99A3BA;
+  --input-border: #CDD9ED;
+  --input-background: #fff;
+  --input-placeholder: #CBD1DC;
+  --input-border-focus: #275EFE;
+  --group-color: var(--input-color);
+  --group-border: var(--input-border);
+  --group-background: #EEF4FF;
+  --group-color-focus: #fff;
+  --group-border-focus: var(--input-border-focus);
+  --group-background-focus: #678EFE;
+}
+.input-decorado {
+  width: 100%;
+}
+.input-decorado .form-field {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: 6px;
+  color: var(--input-color);
+  border: 1px solid var(--input-border);
+  background: var(--input-background);
+  transition: border 0.3s ease;
+}
+.input-decorado .form-field::placeholder {
+  color: var(--input-placeholder);
+}
+.input-decorado .form-field:focus {
+  outline: none;
+  border-color: black;
+}
+.input-decorado .form-field:focus {
+  border-color: var(--input-border-focus);
+}
+.input-decorado .btn {
+  background-color: #F9E450;
+  border: 2px solid #1B1B1B;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 0 16px;
+  text-align: center;
+  font-weight: 800;
+  margin: 20px 0;
+  width: 141px;
+  height: 56px;
+  left: 16px;
+  top: 88px;
+  cursor: pointer;
+  transition: 0.16s ease-out;
+}
+.input-decorado .btn.blue-color {
+  background-color: var(--blue-color);
+}
+.input-decorado .btn.red-color {
+  background-color: var(--red-color);
+  color: white;
+}
+.input-decorado .btn.yellow-color {
+  background-color: var(--yellow-color);
+}
+.input-decorado .btn:hover {
+  background: #FFBB38;
+  border: 3px solid #1B1B1B;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 0px 4px #C1BFFA;
+  border-radius: 16px;
+}
+.input-decorado .btn:hover.blue-color {
+  background: var(--darken-blue-color);
+}
+.input-decorado .btn:hover.red-color {
+  background: var(--darken-red-color);
+  color: white;
+}
+.input-decorado .btn:hover.yellow-color {
+  background: var(--darken-yellow-color);
+}
+.select-input-decorado {
+  width: 50%;
+  height: auto;
+}
+.select-input-decorado select {
+  margin: 0 3rem;
+  width: 100%;
+  padding: 10px 16px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: 6px;
+  color: var(--input-color);
+  border: 1px solid var(--input-border);
+  background: var(--input-background);
+  transition: border 0.3s ease;
+}
+.select-input-decorado select::placeholder {
+  color: var(--input-placeholder);
+}
+.select-input-decorado select:focus {
+  outline: none;
+  border-color: black;
+}

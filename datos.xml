@@ -1,0 +1,168 @@
+<?xml version="1.0" ?>
+<datos>
+    <listaCliente>
+        <cliente>
+            <id>4</id>
+            <nit>202105668</nit>
+            <nombre>Daved Abshalon Ejcalon Chonay</nombre>
+            <direccion>1-65 zona 3, Ciudad de Guatemala</direccion>
+        </cliente>
+        <cliente>
+            <id>5</id>
+            <nit>3014236520101</nit>
+            <nombre>Revydubz</nombre>
+            <direccion>1-65 zona 1, Ciudad de Guatemala</direccion>
+        </cliente>
+        <cliente>
+            <id>6</id>
+            <nit>1603760330101</nit>
+            <nombre>Ing Yuman Ramirez</nombre>
+            <direccion>Ciudad de Guatemala</direccion>
+        </cliente>
+        <cliente>
+            <id>7</id>
+            <nit>2017901212887</nit>
+            <nombre>Keren Ejcalon Chonay</nombre>
+            <direccion>1-65 zona 3, Ciudad de Guatemala</direccion>
+        </cliente>
+        <cliente>
+            <id>8</id>
+            <nit>4925183670245</nit>
+            <nombre>Maria Garcia Fernandez</nombre>
+            <direccion>Ciudad de Guatemala</direccion>
+        </cliente>
+        <cliente>
+            <id>9</id>
+            <nit>8945132076123</nit>
+            <nombre>Andre Maria Ochoa</nombre>
+            <direccion>Ciudad de Guatemala</direccion>
+        </cliente>
+    </listaCliente>
+    <listaProducto>
+        <producto>
+            <id>6</id>
+            <nombre>Cocacola</nombre>
+            <descripcion>Ejemplo de edicion realizada</descripcion>
+            <precio>20.00</precio>
+            <stock>980</stock>
+        </producto>
+        <producto>
+            <id>7</id>
+            <nombre>Papas</nombre>
+            <descripcion>Papalinas naturales</descripcion>
+            <precio>5.00</precio>
+            <stock>960</stock>
+        </producto>
+        <producto>
+            <id>8</id>
+            <nombre>Chetos</nombre>
+            <descripcion>Chetos de queso</descripcion>
+            <precio>5.00</precio>
+            <stock>980</stock>
+        </producto>
+        <producto>
+            <id>9</id>
+            <nombre>Leche</nombre>
+            <descripcion>Leche natural en caja</descripcion>
+            <precio>20.00</precio>
+            <stock>989</stock>
+        </producto>
+        <producto>
+            <id>10</id>
+            <nombre>Detergente</nombre>
+            <descripcion>Detergente liquido con olor a manzanilla</descripcion>
+            <precio>16.00</precio>
+            <stock>999</stock>
+        </producto>
+        <producto>
+            <id>11</id>
+            <nombre>Manzana</nombre>
+            <descripcion>Manzana roja</descripcion>
+            <precio>5.00</precio>
+            <stock>980</stock>
+        </producto>
+    </listaProducto>
+    <listaFactura>
+        <factura>
+            <id>17</id>
+            <maestro>1</maestro>
+            <detalle>Cocacola, 10
+ Chetos, 5
+ Leche, 1</detalle>
+            <fecha>2023-12-29 03:21:13.780257+00:00</fecha>
+            <cliente>202105668 - Daved Abshalon Ejcalon Chonay - 1-65 zona 3, Ciudad de Guatemala</cliente>
+        </factura>
+        <factura>
+            <id>18</id>
+            <maestro>2</maestro>
+            <detalle>Cocacola, 1
+ Chetos, 1</detalle>
+            <fecha>2023-12-29 03:21:26.002259+00:00</fecha>
+            <cliente>202105668 - Daved Abshalon Ejcalon Chonay - 1-65 zona 3, Ciudad de Guatemala</cliente>
+        </factura>
+        <factura>
+            <id>19</id>
+            <maestro>3</maestro>
+            <detalle>Cocacola, 1
+ Chetos, 1</detalle>
+            <fecha>2023-12-29 03:21:30.323260+00:00</fecha>
+            <cliente>202105668 - Daved Abshalon Ejcalon Chonay - 1-65 zona 3, Ciudad de Guatemala</cliente>
+        </factura>
+        <factura>
+            <id>20</id>
+            <maestro>4</maestro>
+            <detalle>Cocacola, 1
+ Chetos, 1</detalle>
+            <fecha>2023-12-29 03:21:34.729313+00:00</fecha>
+            <cliente>202105668 - Daved Abshalon Ejcalon Chonay - 1-65 zona 3, Ciudad de Guatemala</cliente>
+        </factura>
+        <factura>
+            <id>21</id>
+            <maestro>5</maestro>
+            <detalle>Leche, 10</detalle>
+            <fecha>2023-12-29 03:21:52.242579+00:00</fecha>
+            <cliente>3014236520101 - Revydubz - 1-65 zona 1, Ciudad de Guatemala</cliente>
+        </factura>
+        <factura>
+            <id>22</id>
+            <maestro>6</maestro>
+            <detalle>Manzana, 10</detalle>
+            <fecha>2023-12-29 03:22:16.531329+00:00</fecha>
+            <cliente>1603760330101 - Ing Yuman Ramirez - Ciudad de Guatemala</cliente>
+        </factura>
+        <factura>
+            <id>23</id>
+            <maestro>7</maestro>
+            <detalle>Papas, 20</detalle>
+            <fecha>2023-12-29 03:22:39.445366+00:00</fecha>
+            <cliente>4925183670245 - Maria Garcia Fernandez - Ciudad de Guatemala</cliente>
+        </factura>
+        <factura>
+            <id>24</id>
+            <maestro>8</maestro>
+            <detalle>Detergente, 1
+ Manzana, 10
+ Chetos, 10
+ Cocacola, 5
+ Papas, 20</detalle>
+            <fecha>2023-12-29 03:23:25.546167+00:00</fecha>
+            <cliente>8945132076123 - Andre Maria Ochoa - Ciudad de Guatemala</cliente>
+        </factura>
+        <factura>
+            <id>25</id>
+            <maestro>9</maestro>
+            <detalle>Cocacola, 1
+ Chetos, 1</detalle>
+            <fecha>2023-12-29 03:23:37.121328+00:00</fecha>
+            <cliente>1603760330101 - Ing Yuman Ramirez - Ciudad de Guatemala</cliente>
+        </factura>
+        <factura>
+            <id>26</id>
+            <maestro>10</maestro>
+            <detalle>Cocacola, 1
+ Chetos, 1</detalle>
+            <fecha>2023-12-29 03:23:46.428191+00:00</fecha>
+            <cliente>202105668 - Daved Abshalon Ejcalon Chonay - 1-65 zona 3, Ciudad de Guatemala</cliente>
+        </factura>
+    </listaFactura>
+</datos>

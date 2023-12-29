@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Editar factura{% endblock %}
+
+{% block content %}
+<div class="edicion">
+    <div class="form-datos">
+        <div class="container">
+
+            <div class="heading">
+                <h1>Editar Factura</h1>
+            </div>
+
+            <form method="post" action="{% url 'ventas:editar_factura' factura.id %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn blue-color">Guardar cambios</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

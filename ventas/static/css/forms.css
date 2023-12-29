@@ -1,0 +1,225 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyeMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyfMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuOKfMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyYMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuBWYMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf) format('truetype');
+}
+/*===== VARIABLES CSS =====*/
+:root {
+  --red-color: #a62121;
+  --blue-color: #4bb7e6;
+  --yellow-color: #f7d46e;
+  --darken-red-color: #531010;
+  --darken-blue-color: #136386;
+  --darken-yellow-color: #edb40d;
+}
+.form-datos {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  margin: 0 auto;
+}
+.form-datos .container p {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding: 15px 0;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+.form-datos .heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.form-datos h1 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.form-datos label {
+  font-weight: 600;
+}
+.form-datos input,
+.form-datos textarea,
+.form-datos select {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 5px;
+  padding: 16px 24px;
+  width: 90%;
+  height: 15%;
+  left: 1048px;
+  top: 16px;
+  background: #FFFFFF;
+  border: 2px solid #1B1B1B;
+  box-sizing: border-box;
+  border-radius: 16px;
+  transition: 0.2s;
+}
+.form-datos select:focus,
+.form-datos textarea:focus,
+.form-datos input:focus {
+  outline: none;
+  background: #F9E450;
+  border: 3px solid #1B1B1B;
+  border-radius: 16px;
+}
+.form-datos select:focus.blue-color,
+.form-datos textarea:focus.blue-color,
+.form-datos input:focus.blue-color {
+  background: var(--blue-color);
+}
+.form-datos select:focus.red-color,
+.form-datos textarea:focus.red-color,
+.form-datos input:focus.red-color {
+  background: var(--red-color);
+  color: white;
+}
+.form-datos select:focus.yellow-color,
+.form-datos textarea:focus.yellow-color,
+.form-datos input:focus.yellow-color {
+  background: var(--yellow-color);
+}
+.form-datos .double_input {
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 94.5%;
+}
+.form-datos .double_input > div {
+  width: 50%;
+  margin: 0;
+}
+.form-datos .btn {
+  background-color: #F9E450;
+  border: 2px solid #1B1B1B;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 0 16px;
+  text-align: center;
+  font-weight: 800;
+  margin: 20px 0;
+  width: 141px;
+  height: 56px;
+  left: 16px;
+  top: 88px;
+  cursor: pointer;
+  transition: 0.16s ease-out;
+}
+.form-datos .btn.blue-color {
+  background-color: var(--blue-color);
+}
+.form-datos .btn.red-color {
+  background-color: var(--red-color);
+  color: white;
+}
+.form-datos .btn.yellow-color {
+  background-color: var(--yellow-color);
+}
+.form-datos .btn:hover {
+  background: #FFBB38;
+  border: 3px solid #1B1B1B;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 0px 4px #C1BFFA;
+  border-radius: 16px;
+}
+.form-datos .btn:hover.blue-color {
+  background: var(--darken-blue-color);
+}
+.form-datos .btn:hover.red-color {
+  background: var(--darken-red-color);
+  color: white;
+}
+.form-datos .btn:hover.yellow-color {
+  background: var(--darken-yellow-color);
+}

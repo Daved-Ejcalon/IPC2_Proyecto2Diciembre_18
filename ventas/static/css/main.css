@@ -1,0 +1,191 @@
+/*===== GOOGLE FONTS =====*/
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf) format('truetype');
+}
+/*===== VARIABLES CSS =====*/
+:root {
+  --dark-color-lighten: #f2f5ff;
+  --red-color: #a62121;
+  --blue-color: #4bb7e6;
+  --yellow-color: #f7d46e;
+  --btn: #141414;
+  --btn-hover: #3a3a3a;
+  --text: #fbf7f7;
+}
+/*===== RESET =====*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  background-color: var(--dark-color-lighten);
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+}
+main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 75%;
+  min-height: 800px;
+}
+.reporte .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 5rem;
+}
+.reporte .btn {
+  background-color: #F9E450;
+  border: 2px solid #1B1B1B;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 0 16px;
+  text-align: center;
+  font-weight: 800;
+  margin: 20px 0;
+  width: 300px;
+  height: 56px;
+  left: 16px;
+  top: 88px;
+  cursor: pointer;
+  transition: 0.16s ease-out;
+}
+.reporte .btn.blue-color {
+  background-color: var(--blue-color);
+}
+.reporte .btn.red-color {
+  background-color: var(--red-color);
+  color: white;
+}
+.reporte .btn.yellow-color {
+  background-color: var(--yellow-color);
+}
+.reporte .btn:hover {
+  background: #FFBB38;
+  border: 3px solid #1B1B1B;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 0px 4px #C1BFFA;
+  border-radius: 16px;
+}
+.reporte .btn:hover.blue-color {
+  background: var(--darken-blue-color);
+}
+.reporte .btn:hover.red-color {
+  background: var(--darken-red-color);
+  color: white;
+}
+.reporte .btn:hover.yellow-color {
+  background: var(--darken-yellow-color);
+}
+.nuevo_registro {
+  height: 40%;
+  width: 100%;
+  text-align: center;
+  margin: 2rem auto;
+}
+.nuevo_registro.blue-color {
+  border-bottom: 3px dashed var(--blue-color);
+}
+.nuevo_registro.red-color {
+  border-bottom: 3px dashed var(--red-color);
+}
+.nuevo_registro.yellow-color {
+  border-bottom: 3px dashed var(--yellow-color);
+}
+.nuevo_registro .entrada {
+  width: 80%;
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  /* Esto centra horizontalmente */
+}
+.tablero {
+  height: 60%;
+  width: 100%;
+}
+.tablero .manejo-datos {
+  margin: 3rem 0 1rem 0;
+  height: 60%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  padding: 0 5rem;
+}
+.tablero .manejo-datos .izq {
+  width: 65%;
+}
+.tablero .manejo-datos .der {
+  width: 35%;
+}
+.tablero .manejo-datos .der select {
+  margin-top: 1.25rem;
+}
+.tablero .tabla-datos {
+  width: 100%;
+}
+.edicion {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 5rem;
+  min-height: 81dvh;
+}
+.reporte-body {
+  width: 100%;
+  height: 100%;
+}
+.reporte-body h1 {
+  text-align: center;
+  margin: 0.25rem 0;
+}
+.reporte-body .canvas-container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}

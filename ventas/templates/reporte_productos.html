@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Productos más vendidos{% endblock %}
+
+{% block content %}
+    <div class="reporte-body">
+        <h1>Productos más vendidos</h1>
+
+        <div class="canvas-container">
+            <canvas id="grafica"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Obtén los datos de Django y pásalos a JavaScript
+        var nombresProductos = {{ nombres_productos| safe }};
+        var cantidades = {{ cantidades| safe }};
+
+        // Configura la gráfica
+        var ctx = document.getElementById('grafica').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: nombresProductos,
+                datasets: [{
+                    label: 'Cantidad vendida',
+                    data: cantidades,
+                    backgroundColor: 'rgba(220, 38, 24, 0.5)',
+                    borderColor: 'rgba(158, 18, 8, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+{% endblock %}

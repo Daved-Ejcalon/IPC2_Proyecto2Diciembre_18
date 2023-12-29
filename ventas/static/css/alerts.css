@@ -1,0 +1,24 @@
+/* Estilo para el contenedor del mensaje flotante */
+.alert-container {
+  position: fixed;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  padding: 10px;
+  background-color: #c1bcbc;
+  /* Color de fondo verde para mensajes de éxito */
+  color: black;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 5px;
+}
+.alert-container.success {
+  background-color: #4CAF50;
+  color: white;
+}
+.alert-container.error {
+  background-color: #FF5252;
+  color: white;
+}

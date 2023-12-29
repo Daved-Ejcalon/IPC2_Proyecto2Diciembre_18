@@ -1,0 +1,94 @@
+
+
+
+{% extends 'base.html' %}
+
+{% block title %}Ver clientes{% endblock %}
+
+{% block content %}
+    <div class="reporte">
+        <div class="container">
+            <a href="{% url 'ventas:reportes_clientes' %}">
+                <button class="btn yellow-color">Clientes con más compras</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="nuevo_registro yellow-color">
+        <div class="entrada">
+            <div class="form-datos">
+                <div class="container">
+                    <div class="heading">
+                        <h1>Nuevo cliente</h1>
+                    </div>
+
+                    <form class="site-form" method="post" action="">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn yellow-color">Agregar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tablero">
+        <div class="manejo-datos">
+            <div class="izq">
+                <div class="input-decorado">
+                    <form method="get">
+                        {{ form_busqueda }}
+                        <button type="submit" class="btn yellow-color">Buscar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="der">
+                <div class="select-input-decorado">
+                    <select id="ordenarSelect" onchange="ordenarTabla()">
+                        <option >Ordenar por</option>
+                        <option value="normal">Normal</option>
+                        <option value="nit">Nit</option>
+                        <option value="nombre">Nombre</option>
+                        <option value="direccion">Direccion</option>
+                    </select>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="tabla-datos">
+            <div class="container">
+                <h2>Listado de clientes <small id="filter-table">orden: {{ campo_orden }}</small></h2>
+                <ul class="responsive-table">
+                    <li class="table-header yellow-header">
+                        <div class="col col-3">Nit</div>
+                        <div class="col col-3">Nombre</div>
+                        <div class="col col-3">Direccion</div>
+                        <div class="col col-1">Acciones</div>
+                    </li>
+                    {% for dato in datos %}
+                        <li class="table-row">
+                            <div class="col col-3" data-label="Nit">{{ dato.nit }}</div>
+                            <div class="col col-3" data-label="Name">{{ dato.nombre }}</div>
+                            <div class="col col-3" data-label="Adress">{{ dato.direccion }}</div>
+                            <div class="col col-1" data-label="Actions">
+                                <a href="{% url 'ventas:editar_cliente' dato.id %}" class="btn-editar"><i class="fas fa-edit"></i></a>
+                                <a href="{% url 'ventas:borrar_cliente' dato.id %}" class="btn-borrar" onclick="return confirm('¿Estás seguro de que deseas borrar este cliente?')"><i class="fas fa-trash-alt"></i></a>
+                            </div>
+                        </li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function ordenarTabla() {
+            var selectBox = document.getElementById("ordenarSelect");
+            var selectedValue = selectBox.value;  // Usar value en lugar de text
+
+            // Redirigir a la misma página con el parámetro de orden
+            var enlace = "{% url 'ventas:clientes' %}?orden=" + selectedValue;
+            window.location.href = enlace;
+        }
+    </script>
+{% endblock %}

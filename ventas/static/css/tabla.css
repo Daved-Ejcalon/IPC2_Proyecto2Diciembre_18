@@ -1,0 +1,102 @@
+:root {
+  --red-color: #a62121;
+  --blue-color: #4bb7e6;
+  --yellow-color: #f7d46e;
+}
+.tabla-datos .container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.tabla-datos h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+}
+.tabla-datos h2 small {
+  font-size: 0.5em;
+}
+.tabla-datos .responsive-table .btn-ver,
+.tabla-datos .responsive-table .btn-editar,
+.tabla-datos .responsive-table .btn-borrar {
+  cursor: pointer;
+  padding: 5px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 10%;
+}
+.tabla-datos .responsive-table .btn-ver {
+  background-color: #65B741;
+}
+.tabla-datos .responsive-table .btn-editar {
+  background-color: #3081D0;
+}
+.tabla-datos .responsive-table .btn-borrar {
+  background-color: #B80000;
+}
+.tabla-datos .responsive-table li {
+  border-radius: 3px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.tabla-datos .responsive-table .table-header {
+  background-color: #95A5A6;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.tabla-datos .responsive-table .table-header.blue-header {
+  background-color: var(--blue-color);
+}
+.tabla-datos .responsive-table .table-header.red-header {
+  background-color: var(--red-color);
+}
+.tabla-datos .responsive-table .table-header.yellow-header {
+  background-color: var(--yellow-color);
+}
+.tabla-datos .responsive-table .table-row {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.tabla-datos .responsive-table .col-1 {
+  flex-basis: 10%;
+}
+.tabla-datos .responsive-table .col-2 {
+  flex-basis: 20%;
+}
+.tabla-datos .responsive-table .col-3 {
+  flex-basis: 30%;
+}
+.tabla-datos .responsive-table .col-4 {
+  flex-basis: 40%;
+}
+.tabla-datos .responsive-table .col-5 {
+  flex-basis: 50%;
+}
+@media all and (max-width: 767px) {
+  .tabla-datos .responsive-table .table-header {
+    display: none;
+  }
+  .tabla-datos .responsive-table li {
+    display: block;
+  }
+  .tabla-datos .responsive-table .col {
+    flex-basis: 100%;
+  }
+  .tabla-datos .responsive-table .col {
+    display: flex;
+    padding: 10px 0;
+  }
+  .tabla-datos .responsive-table .col:before {
+    color: #6C7A89;
+    padding-right: 10px;
+    content: attr(data-label);
+    flex-basis: 50%;
+    text-align: right;
+  }
+}

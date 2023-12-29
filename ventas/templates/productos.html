@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}Ver productos{% endblock %}
+
+{% block content %}
+
+    <div class="reporte">
+        <div class="container">
+            <a href="{% url 'ventas:reportes_productos' %}">
+                <button class="btn red-color">Productos más vendidos</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="nuevo_registro red-color">
+    <div class="entrada">
+        <div class="form-datos">
+            <div class="container">
+                <div class="heading">
+                    <h1>Nuevo producto</h1>
+                </div>
+
+                <form class="site-form" method="post" action="">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn red-color">Agregar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="tablero">
+    <div class="manejo-datos">
+        <div class="izq">
+            <div class="input-decorado">
+                <form method="get">
+                    {{ form_busqueda }}
+                    <button type="submit" class="btn red-color">Buscar</button>
+                </form>
+            </div>
+        </div>
+        <div class="der">
+            <div class="select-input-decorado">
+                <select id="ordenarSelect" onchange="ordenarTabla()">
+                    <option >Ordenar por</option>
+                    <option value="normal">Normal</option>
+                    <option value="nombre">Nombre</option>
+                    <option value="precio">Precio</option>
+                    <option value="stock">Stock</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="tabla-datos">
+        <div class="container">
+            <h2>Listado de productos <small id="filter-table">orden: {{ campo_orden }}</small></h2>
+            <ul class="responsive-table">
+                <li class="table-header red-header">
+                    <div class="col col-2">Nombre</div>
+                    <div class="col col-3">Descripción</div>
+                    <div class="col col-2">Precio</div>
+                    <div class="col col-2">Stock</div>
+                    <div class="col col-1">Acciones</div>
+                </li>
+                {% for dato in datos %}
+                    <li class="table-row">
+                        <div class="col col-2" data-label="Nombre">{{ dato.nombre }}</div>
+                        <div class="col col-3" data-label="Descripción">{{ dato.descripcion }}</div>
+                        <div class="col col-2" data-label="Precio">{{ dato.precio }}</div>
+                        <div class="col col-2" data-label="Stock">{{ dato.stock }}</div>
+                        <div class="col col-1" data-label="Actions">
+                            <a href="{% url 'ventas:editar_producto' dato.id %}" class="btn-editar"><i class="fas fa-edit"></i></a>
+                            <a href="{% url 'ventas:borrar_producto' dato.id %}" class="btn-borrar" onclick="return confirm('¿Estás seguro de que deseas borrar este producto?')"><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                    </li>
+                {% endfor %}
+
+            </ul>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        function ordenarTabla() {
+            var selectBox = document.getElementById("ordenarSelect");
+            var selectedValue = selectBox.value;  // Usar value en lugar de text
+
+            // Redirigir a la misma página con el parámetro de orden
+            var enlace = "{% url 'ventas:productos' %}?orden=" + selectedValue;
+            window.location.href = enlace;
+        }
+    </script>
+
+{% endblock %}
